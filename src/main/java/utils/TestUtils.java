@@ -69,9 +69,8 @@ public class TestUtils {
 		List<WebElement> options = driver.findElements(locator);
 		for (WebElement option : options) {
 			String optionValue = option.getText();
-			if (optionValue.equalsIgnoreCase("Xero")) {
-				JavascriptExecutor executor = (JavascriptExecutor) driver;
-				executor.executeScript("arguments[0].click();", optionValue);
+			if (optionValue.equalsIgnoreCase(value)) {
+				driver.findElement(By.xpath("//div[.='" + optionValue + "']")).click();
 				break; // Exit the loop once the "Xero" option is selected
 			}
 		}

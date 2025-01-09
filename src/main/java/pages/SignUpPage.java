@@ -13,7 +13,7 @@ public class SignUpPage {
 	private By lastNameInputField = By.cssSelector("input[name='last_name']");
 	private By emailInputField = By.cssSelector("input[name='email']");
 	private By phoneNumberInputField = By.cssSelector("input[name='phone_number']");
-	private By passwordInputField = By.cssSelector("input[name='phone_number']");
+	private By passwordInputField = By.cssSelector("input[name='password']");
 	private By signUpButton = By.xpath("//button[.='Get Started Free']");
 	private By loginLink = By.xpath("//span[.=' Login']");
 	private By firstNameValidationMessage = By.cssSelector("p[id=':r0:-form-item-message']");
@@ -25,6 +25,7 @@ public class SignUpPage {
 	private By workshopNameValidationMessage = By.cssSelector("p[id=':r3:-form-item-message']");
 	private By invoiceOPtionsButton = By.cssSelector("button[role='combobox']");
 	private By invoiceOptions = By.cssSelector("option");
+	private By invoiceOptionValidationMessage = By.xpath("//p[@id=':r5:-form-item-message'][contains(.,'program')]");
 
 	public SignUpPage(WebDriver driver) {
 		this.driver = driver;
@@ -36,9 +37,17 @@ public class SignUpPage {
 		return this;
 	}
 
+	public String extractFirstNameValidationMessageText() {
+		return testUtils.waitForElement(firstNameValidationMessage).getText();
+	}
+
 	public SignUpPage fillLastName(String value) {
 		testUtils.fillInput(lastNameInputField, value);
 		return this;
+	}
+
+	public String extractLastNameValidationMessage() {
+		return testUtils.waitForElement(lastNameValidationMessage).getText();
 	}
 
 	public SignUpPage fillEmail(String value) {
@@ -46,13 +55,49 @@ public class SignUpPage {
 		return this;
 	}
 
+	public String extractEmailValidationMessageText() {
+		return testUtils.waitForElement(emailValidationMessage).getText();
+	}
+
 	public SignUpPage fillPhoneNumber(String value) {
 		testUtils.fillInput(phoneNumberInputField, value);
 		return this;
 	}
 
+	public String extractPhoneNumberValidationMessageText() {
+		return testUtils.waitForElement(phoneNumberFieldValidationMessage).getText();
+	}
+
 	public SignUpPage fillPassword(String value) {
 		testUtils.fillInput(passwordInputField, value);
+		return this;
+	}
+
+	public String extractPasswordValidationMessage() {
+		return testUtils.waitForElement(passwordValidationMessage).getText();
+	}
+
+	public SignUpPage fillWorkshopName(String value) {
+		testUtils.fillInput(workshopNameInputField, value);
+		return new SignUpPage(driver);
+	}
+
+	public String getWorkshopNameValidationMessage() {
+		return testUtils.waitForElement(workshopNameValidationMessage).getText();
+	}
+
+	public String getInvoiceOptionValidationMessage() {
+		return testUtils.waitForElement(invoiceOptionValidationMessage).getText();
+	}
+
+	public SignUpPage selectInvoiceOption(String value) throws InterruptedException {
+		clickInvoiceOption();
+		testUtils.selectValueFromDropdown(invoiceOptions, value);
+		return this;
+	}
+
+	public SignUpPage clickInvoiceOption() {
+		testUtils.clickOn(invoiceOPtionsButton);
 		return this;
 	}
 
@@ -66,29 +111,4 @@ public class SignUpPage {
 		return new LoginPage(driver);
 	}
 
-	public String extractFirstNameValidationMessageText() {
-		return testUtils.waitForElement(firstNameValidationMessage).getText();
-	}
-
-	public String extractLastNameValidationMessage() {
-		return testUtils.waitForElement(lastNameValidationMessage).getText();
-	}
-
-	public String extractEmailValidationMessageText() {
-		return testUtils.waitForElement(emailValidationMessage).getText();
-	}
-
-	public String extractPhoneNumberValidationMessageText() {
-		return testUtils.waitForElement(phoneNumberFieldValidationMessage).getText();
-	}
-
-	public String extractPasswordValidationMessage() {
-		return testUtils.waitForElement(passwordValidationMessage).getText();
-	}
-
-	public SignUpPage selectInvoiceOption(String value) throws InterruptedException {
-		testUtils.clickOn(invoiceOPtionsButton);
-		testUtils.selectValueFromDropdown(invoiceOptions, value);
-		return this;
-	}
 }
