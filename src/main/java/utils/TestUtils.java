@@ -65,7 +65,7 @@ public class TestUtils {
 		return dateTimeFormatter.format(dateTime);
 	}
 
-	public void selectValueFromDropdown(By locator, String value) throws InterruptedException {
+	public void selectValueFromHiddenDropdown(By locator, String value) throws InterruptedException {
 		List<WebElement> options = driver.findElements(locator);
 		for (WebElement option : options) {
 			String optionValue = option.getText();

@@ -92,7 +92,7 @@ public class SignUpPage {
 
 	public SignUpPage selectInvoiceOption(String value) throws InterruptedException {
 		clickInvoiceOption();
-		testUtils.selectValueFromDropdown(invoiceOptions, value);
+		testUtils.selectValueFromHiddenDropdown(invoiceOptions, value);
 		return this;
 	}
 

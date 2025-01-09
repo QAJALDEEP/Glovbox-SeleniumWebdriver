@@ -15,5 +15,4 @@ public class VerifyAccountPage {
 		return testUtils.waitForElement(userEmail).getText();
 	}
 	
-
 }
