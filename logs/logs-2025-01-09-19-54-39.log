@@ -1,0 +1,48 @@
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 26 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 40 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 2 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2025-01-09 19:54:40 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\TechnoQA1\AppData\Local\Temp\testng-eclipse--1991787703\testng-customsuite.xml
+
+2025-01-09 19:54:40 [main] INFO  tests.logintest.SignUpTest - Starting test suite...
+2025-01-09 19:54:40 [main] INFO  tests.logintest.SignUpTest - Detected browser: chrome
+2025-01-09 19:54:44 [main] INFO  tests.logintest.SignUpTest - Chrome browser initialized.
+2025-01-09 19:54:44 [main] INFO  tests.logintest.SignUpTest - Chrome browser setup completed.
+2025-01-09 19:54:44 [main] INFO  tests.logintest.SignUpTest - Browser window maximized and cookies deleted.
+2025-01-09 19:54:44 [main] INFO  tests.logintest.SignUpTest - Launching URL: https://glovbox.com.au
+2025-01-09 19:54:45 [main] INFO  tests.logintest.SignUpTest - URL launched: https://glovbox.com.au
+2025-01-09 19:54:45 [main] INFO  tests.logintest.SignUpTest - Test suite initialized successfully.
+2025-01-09 19:54:45 [main] INFO  org.testng.internal.Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 54 ms.
+2025-01-09 19:54:48 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.jq.Main@7d755813: 155 ms
+2025-01-09 19:54:48 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.FailedReporter@69c93ca4: 3 ms
+2025-01-09 19:54:48 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.XMLReporter@10876a6: 17 ms
+2025-01-09 19:54:48 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@2e380628: 10 ms
+2025-01-09 19:54:48 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@320494b6: 10 ms
+2025-01-09 19:54:48 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@652ab8d9: 0 ms

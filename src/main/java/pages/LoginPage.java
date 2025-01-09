@@ -17,8 +17,11 @@ public class LoginPage {
 	private final By userSwitch = By.xpath("//button[.='User']");
 	private final By workshopSwitch = By.xpath("//button[.='Workshop']");
 	private final By signUpLink = By.xpath("//span[.='Sign up now']");
-	private final By termsOfServiceLink = By.cssSelector("a[href='/terms-of-service']");
-	private final By globalPrivacyStatementLink = By.cssSelector("a[href='/privacy-statement']");
+	/*
+	 * private final By termsOfServiceLink =
+	 * By.cssSelector("a[href='/terms-of-service']"); private final By
+	 * globalPrivacyStatementLink = By.cssSelector("a[href='/privacy-statement']");
+	 */
 	private final By forgotPasswordLink = By.xpath("//button[.='Forgot your password?']");
 
 	public LoginPage(WebDriver driver) {
@@ -63,6 +66,21 @@ public class LoginPage {
 	public ForgotPasswordPage clickForgotPasswordLink() {
 		testUtils.clickOn(forgotPasswordLink);
 		return new ForgotPasswordPage(driver);
+	}
+
+	public LoginPage switchToUser() {
+		testUtils.clickOn(userSwitch);
+		return this;
+	}
+
+	public LoginPage switchWorkshop() {
+		testUtils.clickOn(workshopSwitch);
+		return this;
+	}
+
+	public SignUpPage clickSignUpLink() {
+		testUtils.clickOn(signUpLink);
+		return new SignUpPage(driver);
 	}
 
 }

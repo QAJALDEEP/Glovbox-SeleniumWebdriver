@@ -14,4 +14,6 @@ public class Constants {
 	// Path to the web configuration properties file
 	public static final Path WEBCONFIG_FILE_PATH = Paths.get(ROOT_PATH, "src", "test", "resources",
 			"webconfig.properties");
+	
+	public static final Path HTMLREPORT_FILE_PATH = Paths.get(ROOT_PATH, "htmlreports");
 }

@@ -3,12 +3,19 @@ package utils;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Iterator;
+import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import lombok.val;
 
 public class TestUtils {
 
@@ -53,7 +60,22 @@ public class TestUtils {
 
 	public static String getCurrentDateAndTime() {
 		LocalDateTime dateTime = LocalDateTime.now();
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");
+
 		return dateTimeFormatter.format(dateTime);
 	}
+
+	public void selectValueFromDropdown(By locator, String value) throws InterruptedException {
+		List<WebElement> options = driver.findElements(locator);
+		for (WebElement option : options) {
+			String optionValue = option.getText();
+			if (optionValue.equalsIgnoreCase("Xero")) {
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", optionValue);
+				break; // Exit the loop once the "Xero" option is selected
+			}
+		}
+
+	}
+
 }
