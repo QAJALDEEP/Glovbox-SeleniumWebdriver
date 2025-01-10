@@ -5,6 +5,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import utils.ExtentReportUtils;
+import utils.TestUtils;
 
 public class TestListeners extends ExtentReportUtils implements ITestListener {
 
@@ -17,6 +18,7 @@ public class TestListeners extends ExtentReportUtils implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		getTest().pass("Test Passed");
+		getTest().addScreenCaptureFromPath(TestUtils.captureFullPageScreenshot());
 	}
 
 	@Override

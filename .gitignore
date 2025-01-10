@@ -2,3 +2,5 @@ logs/
 changeLogs.txt
 /target/
 *.txt
+/htmlreports
+/screenshots

@@ -2,20 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-10T02:24:20 IST" name="Default suite" finished-at="2025-01-10T02:24:26 IST" duration-ms="5679">
+  <suite started-at="2025-01-10T13:06:12 IST" name="Default suite" finished-at="2025-01-10T13:06:16 IST" duration-ms="3856">
     <groups>
     </groups>
-    <test started-at="2025-01-10T02:24:20 IST" name="Default test" finished-at="2025-01-10T02:24:26 IST" duration-ms="5679">
-      <class name="tests.logintest.SignUpTest">
-        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.logintest.SignUpTest@30ea8c23]" started-at="2025-01-10T02:24:18 IST" name="startUp" finished-at="2025-01-10T02:24:20 IST" duration-ms="2293" status="PASS">
+    <test started-at="2025-01-10T13:06:12 IST" name="Default test" finished-at="2025-01-10T13:06:16 IST" duration-ms="3856">
+      <class name="tests.logintest.LoginTests">
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.logintest.LoginTests@4c550889]" started-at="2025-01-10T13:06:09 IST" name="startUp" finished-at="2025-01-10T13:06:12 IST" duration-ms="3622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startUp -->
-        <test-method signature="clickOPtion()[pri:0, instance:tests.logintest.SignUpTest@30ea8c23]" started-at="2025-01-10T02:24:20 IST" name="clickOPtion" finished-at="2025-01-10T02:24:26 IST" duration-ms="5653" status="PASS">
+        <test-method is-config="true" signature="doBeforeMethod()[pri:0, instance:tests.logintest.LoginTests@4c550889]" started-at="2025-01-10T13:06:13 IST" name="doBeforeMethod" finished-at="2025-01-10T13:06:13 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOPtion -->
-      </class> <!-- tests.logintest.SignUpTest -->
+        </test-method> <!-- doBeforeMethod -->
+        <test-method signature="test_LoginUsingValidLoginDetails()[pri:0, instance:tests.logintest.LoginTests@4c550889]" started-at="2025-01-10T13:06:13 IST" name="test_LoginUsingValidLoginDetails" finished-at="2025-01-10T13:06:16 IST" duration-ms="2620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_LoginUsingValidLoginDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.logintest.LoginTests@4c550889]" started-at="2025-01-10T13:06:17 IST" name="tearDown" finished-at="2025-01-10T13:06:18 IST" duration-ms="444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.logintest.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

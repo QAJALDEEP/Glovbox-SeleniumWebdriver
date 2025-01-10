@@ -1,32 +1,31 @@
 package utils;
 
+import java.io.File;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import lombok.val;
 
 public class TestUtils {
 
-	WebDriver driver;
+	private static WebDriver driver; // Keep static if required
 	private WebDriverWait wait;
 
-	public TestUtils(WebDriver driver) {
-		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.IMPLICIT_WAIT));
+	public TestUtils(WebDriver driverInstance) {
+	    driver = driverInstance; 
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.IMPLICIT_WAIT));
 	}
 
+	
 	public WebElement waitForElementToBeClickable(By elementLocator) {
 		if (elementLocator != null) {
 			return wait.until(ExpectedConditions.elementToBeClickable(elementLocator));
@@ -75,6 +74,14 @@ public class TestUtils {
 			}
 		}
 
+	}
+	
+	public static String captureFullPageScreenshot() {
+		File ts = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String imgFile = Paths.get(Constants.ROOT_PATH,"screenshots",getCurrentDateAndTime()+".png").toString();
+		File srcFile = new File(imgFile);
+		ts.renameTo(srcFile);
+		return imgFile;
 	}
 
 }
